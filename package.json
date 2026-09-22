@@ -1,0 +1,14 @@
+{
+  "name": "gatherly",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "start": "node scripts/start.mjs",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix backend test && npm --prefix frontend test"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

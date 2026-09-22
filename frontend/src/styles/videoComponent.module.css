@@ -1,0 +1,30 @@
+.lobby { max-width: 760px; margin: auto; padding: 24px; text-align: center; }
+.lobby h1 { color: #D97500; }
+.lobby .tile { max-width: 600px; margin: 20px auto 8px; }
+.lobbyForm { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 20px 0; }
+.meetVideoContainer { min-height: 100vh; height: 100dvh; display: flex; flex-direction: column; background: rgb(1,4,48); color: white; }
+.header { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 12px 20px; border-bottom: 1px solid #ffffff30; }
+.header strong { margin-right: auto; }
+.header span { font-size: 14px; }
+.meetingBody { display: flex; flex: 1; min-height: 0; gap: 16px; padding: 16px; }
+.conferenceView { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 16px; flex: 1; overflow-y: auto; align-content: start; }
+.tile { position: relative; min-width: 0; overflow: hidden; border-radius: 12px; background: #171b39; }
+.tile video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; background: #171b39; }
+.tileLabel { padding: 8px 12px; color: white; font-size: 14px; }
+.waiting { align-self: center; text-align: center; color: #c8cbe0; }
+.buttonContainers { display: flex; justify-content: center; align-items: center; gap: 16px; padding: 12px; border-top: 1px solid #ffffff30; }
+.buttonContainers svg { font-size: 30px; }
+.chatRoom { display: flex; flex-direction: column; width: 310px; max-width: 40%; color: #191919; background: white; border-radius: 12px; padding: 16px; }
+.chatRoom h2 { margin: 0 0 12px; }
+.chattingDisplay { flex: 1; overflow-y: auto; min-height: 100px; }
+.message { margin: 0 0 14px; overflow-wrap: anywhere; }
+.message p { margin: 4px 0; white-space: pre-wrap; }
+.chattingArea { display: flex; gap: 4px; padding-top: 12px; }
+@media(max-width:700px) {
+ .meetingBody { flex-direction: column; overflow-y: auto; }
+ .conferenceView { flex: none; overflow: visible; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); }
+ .chatRoom { width: auto; max-width: none; min-height: 230px; flex: 1; }
+ .chattingDisplay { max-height: 180px; }
+ .header { gap: 8px; font-size: 14px; }
+ .buttonContainers { gap: 8px; }
+}
